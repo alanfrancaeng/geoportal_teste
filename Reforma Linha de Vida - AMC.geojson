@@ -1,0 +1,33 @@
+{
+    "type":  "FeatureCollection",
+    "name":  "Reforma Linha de Vida - AMC",
+    "crs":  {
+                "type":  "name",
+                "properties":  {
+                                   "name":  "urn:ogc:def:crs:OGC:1.3:CRS84"
+                               }
+            },
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "Name":  "Reforma linha de vida pátio de carregamento de chorume",
+                                            "status":  "Contratação",
+                                            "inicio":  "10/11/2026",
+                                            "fim_previsto":  "31/12/2026",
+                                            "tipo":  "AMC",
+                                            "descricao":  "Reforma linha de vida pátio de carregamento de chorume - AMC",
+                                            "pdf":  "01-Reforma Linha de Vida - AMC.pdf",
+                                            "excel":  ""
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -38.367213925575683,
+                                                              -12.8634909137293,
+                                                              80.974593479879928
+                                                          ]
+                                      }
+                     }
+                 ]
+}

@@ -1,0 +1,62 @@
+{
+    "type":  "FeatureCollection",
+    "name":  "CEL-7 - Etapa-4 -contorno - AMC",
+    "crs":  {
+                "type":  "name",
+                "properties":  {
+                                   "name":  "urn:ogc:def:crs:OGC:1.3:CRS84"
+                               }
+            },
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "Name":  "Célula 7 - Etapa 4",
+                                            "status":  "Atrasada",
+                                            "inicio":  "17/08/2026",
+                                            "fim_previsto":  "29/04/2027",
+                                            "tipo":  "AMC",
+                                            "descricao":  "Célula 7 - Etapa 4 - Aterro Metropolitano Centro",
+                                            "pdf":  "CEL-7 - Etapa-4 - AMC.pdf",
+                                            "excel":  ""
+                                        },
+                         "geometry":  {
+                                          "type":  "Polygon",
+                                          "coordinates":  [
+                                                              [
+                                                                  [
+                                                                      -38.376159618325879,
+                                                                      -12.852447360708901,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.377915636262131,
+                                                                      -12.851460406161159,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.37835278635864,
+                                                                      -12.852469686000051,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.3787055968643,
+                                                                      -12.85358363659204,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.376727158747087,
+                                                                      -12.854151926387299,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.376159618325879,
+                                                                      -12.852447360708901,
+                                                                      0.0
+                                                                  ]
+                                                              ]
+                                                          ]
+                                      }
+                     }
+                 ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "3",
+    "material": "PEAD 2mm",
+    "quantidade": "16 Bobinas",
+    "descricao": "Área por bobina 350 m²",
+    "divisao": "AMC",
+    "categoria": "Geossintéticos & Impermeabilização",
+    "unidade": ""
+  },
+  {
+    "id": "4",
+    "material": "GCL Bentonita",
+    "quantidade": "46 Bobinas",
+    "descricao": "Área por bobina 170 m²",
+    "divisao": "AMC",
+    "categoria": "Geossintéticos & Impermeabilização",
+    "unidade": ""
+  },
+  {
+    "id": "5",
+    "material": "Geotêxtil BIDIM RT-600",
+    "quantidade": "10 Bobinas",
+    "descricao": "Área por bobina 230 m²",
+    "divisao": "AMC",
+    "categoria": "Geossintéticos & Impermeabilização",
+    "unidade": ""
+  },
+  {
+    "id": "6",
+    "material": "Geotêxtil BIDIM RT-300",
+    "quantidade": "3 Bobinas",
+    "descricao": "Área por bobina 230 m²",
+    "divisao": "AMC",
+    "categoria": "Geossintéticos & Impermeabilização",
+    "unidade": ""
+  }
+]

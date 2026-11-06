@@ -1,0 +1,72 @@
+{
+    "type":  "FeatureCollection",
+    "name":  "Bacia Conder -contorno - AMC",
+    "crs":  {
+                "type":  "name",
+                "properties":  {
+                                   "name":  "urn:ogc:def:crs:OGC:1.3:CRS84"
+                               }
+            },
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "Name":  "Bacia Conder",
+                                            "status":  "Em Andamento",
+                                            "inicio":  "15/09/2026",
+                                            "fim_previsto":  "28/02/2027",
+                                            "tipo":  "AMC",
+                                            "descricao":  "Bacia Conder - Aterro Metropolitano Centro",
+                                            "pdf":  "Bacia Conder - AMC.pdf",
+                                            "excel":  ""
+                                        },
+                         "geometry":  {
+                                          "type":  "Polygon",
+                                          "coordinates":  [
+                                                              [
+                                                                  [
+                                                                      -38.368502146206147,
+                                                                      -12.863728818606621,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.368185458941383,
+                                                                      -12.86388882523403,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.368106137588278,
+                                                                      -12.863736853273529,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.368019518191581,
+                                                                      -12.863744883824809,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.367961899963611,
+                                                                      -12.86364020823331,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.368380044809143,
+                                                                      -12.8634310692771,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.368375760447343,
+                                                                      -12.863441277358881,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.368502146206147,
+                                                                      -12.863728818606621,
+                                                                      0.0
+                                                                  ]
+                                                              ]
+                                                          ]
+                                      }
+                     }
+                 ]
+}

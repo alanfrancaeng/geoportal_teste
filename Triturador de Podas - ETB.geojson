@@ -1,0 +1,33 @@
+{
+    "type":  "FeatureCollection",
+    "name":  "Triturador de Podas - ETB",
+    "crs":  {
+                "type":  "name",
+                "properties":  {
+                                   "name":  "urn:ogc:def:crs:OGC:1.3:CRS84"
+                               }
+            },
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "Name":  "Projeto triturador de poda",
+                                            "status":  "Elaboração de Projeto",
+                                            "inicio":  "13/10/2026",
+                                            "fim_previsto":  "31/12/2026",
+                                            "tipo":  "ETB",
+                                            "descricao":  "Projeto triturador de poda - ETB",
+                                            "pdf":  "",
+                                            "excel":  ""
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -38.430654593399581,
+                                                              -12.91841418381358,
+                                                              69.550872366347079
+                                                          ]
+                                      }
+                     }
+                 ]
+}

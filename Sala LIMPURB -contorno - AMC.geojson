@@ -1,0 +1,72 @@
+{
+    "type":  "FeatureCollection",
+    "name":  "Sala LIMPURB -contorno - AMC",
+    "crs":  {
+                "type":  "name",
+                "properties":  {
+                                   "name":  "urn:ogc:def:crs:OGC:1.3:CRS84"
+                               }
+            },
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "Name":  "Sala de Fiscalização do Poder Concedente",
+                                            "status":  "Cotação",
+                                            "inicio":  "10/11/2026",
+                                            "fim_previsto":  "25/01/2027",
+                                            "tipo":  "AMC",
+                                            "descricao":  "Sala de Fiscalização do Poder Concedente - AMC",
+                                            "pdf":  "Sala LIMPURB - AMC.pdf",
+                                            "excel":  ""
+                                        },
+                         "geometry":  {
+                                          "type":  "Polygon",
+                                          "coordinates":  [
+                                                              [
+                                                                  [
+                                                                      -38.364424095264638,
+                                                                      -12.864368276924861,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.364415838716077,
+                                                                      -12.86436827696361,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.364221565770102,
+                                                                      -12.86442355228286,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.364200710408127,
+                                                                      -12.86429557122619,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.364283303395993,
+                                                                      -12.86419764657483,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.364323904401523,
+                                                                      -12.864194226494689,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.364343693794453,
+                                                                      -12.86425702617966,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.364424095264638,
+                                                                      -12.864368276924861,
+                                                                      0.0
+                                                                  ]
+                                                              ]
+                                                          ]
+                                      }
+                     }
+                 ]
+}

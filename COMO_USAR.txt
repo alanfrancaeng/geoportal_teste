@@ -1,0 +1,78 @@
+================================================================================
+   BATTRE - GEOPORTAL, PAINEL EXECUTIVO PMO, PLANO DE AÇÃO & ESTOQUE
+   Instruções de Inicialização e Sincronização em Pasta Compartilhada (OneDrive)
+================================================================================
+
+1. COMO INICIAR O SISTEMA
+--------------------------------------------------------------------------------
+Para iniciar o sistema completo com busca e sincronização automática:
+
+   a) No Atalho na sua Área de Trabalho:
+      "GEOportal & BI BATTRE.bat"
+
+   b) Ou no arquivo dentro da pasta compartilhada:
+      "INICIAR_GEOPORTAL.bat"
+
+Ao iniciar, o sistema realiza automaticamente:
+- Leitura e sincronização imediata de todas as planilhas Excel:
+  * "BI_PMO_Obras_BATTRE.xlsx" (Indicadores PMO, Curva S, Financeiro, Prazos)
+  * "Plano de ação.xlsx" (Plano de Ação semanal e Estoque de Materiais)
+- Inicialização do servidor local e abertura automática do navegador
+  (Edge ou Chrome) no endereço: http://localhost:8080/index.html.
+
+
+2. MÓDULOS DISPONÍVEIS NA PLATAFORMA (TELA CHEIA)
+--------------------------------------------------------------------------------
+A plataforma é dividida em 4 módulos principais no topo:
+
+   1. 🗺️ WebGIS Interativo:
+      - Mapa espacial das obras da BATTRE (AMC e ETB).
+      - Camadas de satélite do Google (Satélite puro e Híbrido com vias/rótulos).
+      - Contornos georreferenciados e marcadores com tags de status.
+      - Botão direto em cada obra: "Ver Plano de Ação deste Projeto".
+
+   2. 📊 BI-Obras BATTRE:
+      - Dashboard executivo PMO completo.
+      - Gráficos por projeto: Curva S, Desembolso, EAP, Riscos, Indicadores EVM.
+      - Layout editável personalizado por usuário.
+
+   3. 📋 Plano de Ação (Totalmente Redesenhado em Tela Cheia):
+      - Gestão ágil de pendências, prazos e ações corretivas/preventivas.
+      - Seletor rápido de projetos em barra de pills (Visão Geral + 6 Obras).
+      - Painel de KPIs Executivos: Total, Atrasadas, Urgentes (≤ 3 dias), No Prazo e Concluídas.
+      - Banner de Integração Espacial com o GeoPortal: Botão "Localizar no GeoPortal"
+        centraliza e foca a câmera do mapa instantaneamente na obra selecionada.
+      - Edição inline direta: clique em qualquer célula para alterar texto ou prazo.
+      - Seleção de status com cores oficiais (Vermelho, Amarelo, Azul e Verde).
+      - Botão "+ Nova Ação" para adicionar novas pendências.
+
+   4. 📦 Estoque de Materiais (Almoxarifado Central AMC):
+      - Controle geral de geossintéticos (Geomembrana PEAD, Geocomposto GCL, BIDIM).
+      - Métricas automáticas: tipos catalogados e área total calculada (m² de cobertura).
+      - Alternância de visualização: Cards Executivos ou Tabela Detalhada.
+      - Edição inline rápida e botão "+ Novo Material".
+
+
+3. COMPARTILHAMENTO E SINCRONIZAÇÃO EM REDE / ONEDRIVE
+--------------------------------------------------------------------------------
+Como a pasta está em um diretório do OneDrive compartilhado entre os colegas
+com login cadastrado (Alan, Tiago e Tácyla):
+
+- Todas as alterações feitas no portal (novas ações, status, estoques) são
+  gravadas diretamente nos arquivos da pasta:
+  * "plano_acao.json"
+  * "estoque.json"
+  * "dados_obras.json"
+
+- Quando você clica em "Salvar na Pasta" ou edita uma pendência, o servidor local
+  salva o arquivo na pasta compartilhada, que o OneDrive sincroniza automaticamente
+  para os outros colegas.
+
+- Se a equipe atualizar as planilhas Excel ("Plano de ação.xlsx" ou "BI_PMO_Obras_BATTRE.xlsx"):
+  1. Salve a planilha normalmente no Excel (Ctrl+B).
+  2. No portal, basta clicar no botão "Atualizar Planilha" no topo ou apertar F5.
+  3. Todos os gráficos, pendências e estoques são atualizados instantaneamente!
+
+================================================================================
+BATTRE — Monitoramento Georreferenciado & PMO de Obras
+================================================================================

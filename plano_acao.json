@@ -1,0 +1,316 @@
+{
+  "Bacia Conder": [
+    {
+      "id": "2",
+      "pendencia": "Mapa de cotação da impermeabilização",
+      "acao": "Cotar mais 02 fornecedores",
+      "responsavel": "Tácyla",
+      "prazo": "30/10/2026",
+      "status": "Replanejado",
+      "novoPrazo": "25/11/2026",
+      "atualizacoes": [
+        {
+          "id": "upd_1793883176557",
+          "data": "05/11/2026 09:52",
+          "autor": "Alan",
+          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 25/11/2026 (Prazo original: 30/10/2026).",
+          "novoPrazo": "25/11/2026"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "pendencia": "Atualizar projeto executivo da bacia conder",
+      "acao": "Atualizar projeto com detalhes executivos, localização e materiais",
+      "responsavel": "Alan",
+      "prazo": "05/11/2026",
+      "status": "Urgente"
+    },
+    {
+      "id": "4",
+      "pendencia": "Concretagem piso",
+      "acao": "Programar com Gabriela equipe",
+      "responsavel": "Tácyla",
+      "prazo": "06/11/2026",
+      "status": "Urgente"
+    },
+    {
+      "id": "5",
+      "pendencia": "Cronograma",
+      "acao": "Revisar o cronograma e detalhar",
+      "responsavel": "Tácyla",
+      "prazo": "10/11/2026",
+      "status": "Pendente"
+    },
+    {
+      "id": "6",
+      "pendencia": "Contabilizar geocompostos em estoque",
+      "acao": "PEAD, GCL, GEOTEXTIL",
+      "responsavel": "Alan",
+      "prazo": "Concluido",
+      "status": "Concluído"
+    },
+    {
+      "id": "7",
+      "pendencia": "Avaliar necessidade de concretagem do fundo",
+      "acao": "",
+      "responsavel": "",
+      "prazo": "Concluido",
+      "status": "Concluído"
+    }
+  ],
+  "Célula 7 - Etapa 4": [
+    {
+      "id": "2",
+      "pendencia": "Monitorar mobilização Caçambas P9",
+      "acao": "",
+      "responsavel": "Tiago",
+      "prazo": "Concluído",
+      "status": "Concluído"
+    },
+    {
+      "id": "3",
+      "pendencia": "Ordem de serviço para inicio da obra",
+      "acao": "Elaborar ordem de serviço",
+      "responsavel": "Tácyla",
+      "prazo": "04/11/2026",
+      "status": "Urgente"
+    },
+    {
+      "id": "4",
+      "pendencia": "Conferir descrição dos serviços e materiais x BNB",
+      "acao": "Analisar planilhas do BNB, contrato STAMZ e compra de materiais",
+      "responsavel": "Tiago",
+      "prazo": "10/11/2026",
+      "status": "Pendente"
+    },
+    {
+      "id": "5",
+      "pendencia": "Elaborar contrato com JÁ",
+      "acao": "Enviar mapa de cotação para juridico e solicitar minuta de contrato",
+      "responsavel": "Tácyla",
+      "prazo": "Concluído",
+      "status": "Concluído"
+    },
+    {
+      "id": "6",
+      "pendencia": "Cadastro Oracle",
+      "acao": "Alinhar com financeiro o cadastro do fornecedor",
+      "responsavel": "Tácyla",
+      "prazo": "Concluído",
+      "status": "Concluído"
+    },
+    {
+      "id": "7",
+      "pendencia": "Elaborar mapa de cotação STAMZ",
+      "acao": "Coletar propostas e avaliar",
+      "responsavel": "Tiago",
+      "prazo": "21/10/2026",
+      "status": "Atrasado"
+    },
+    {
+      "id": "8",
+      "pendencia": "Ata 3ª Reunião",
+      "acao": "Revisar ata e enviar para assinatura",
+      "responsavel": "Tácyla",
+      "prazo": "Concluído",
+      "status": "Concluído"
+    },
+    {
+      "id": "9",
+      "pendencia": "Ata 4ª Reunião",
+      "acao": "Elaborar ata e enviar para aprovação do fornecedor",
+      "responsavel": "Tácyla",
+      "prazo": "09/11/2026",
+      "status": "Pendente"
+    }
+  ],
+  "Reforma linha de vida": [
+    {
+      "id": "2",
+      "pendencia": "Verificar data de inicio do serviço e horários de abertura de PT",
+      "acao": "",
+      "responsavel": "Tiago",
+      "prazo": "Concluído",
+      "status": "Concluído"
+    },
+    {
+      "id": "3",
+      "pendencia": "Reunir com QSMA e Operação",
+      "acao": "Avaliar logistica e prazos do serviço",
+      "responsavel": "Tiago",
+      "prazo": "Concluído",
+      "status": "Concluído"
+    },
+    {
+      "id": "4",
+      "pendencia": "Medição de mobilização",
+      "acao": "Realizar medição de 30% do valor para mobilização",
+      "responsavel": "Maria",
+      "prazo": "Concluído",
+      "status": "Concluído"
+    },
+    {
+      "id": "5",
+      "pendencia": "Pagamento",
+      "acao": "Acompanhar pagamento da medição de mobilização",
+      "responsavel": "Tiago",
+      "prazo": "Concluído",
+      "status": "Concluído"
+    },
+    {
+      "id": "6",
+      "pendencia": "Integração/Documentação colaboradores",
+      "acao": "Verificar relação de documentos e integração dos colaboradores",
+      "responsavel": "Tiago",
+      "prazo": "09/11/2026",
+      "status": "Pendente"
+    }
+  ],
+  "Reforma do tanque": [
+    {
+      "id": "2",
+      "pendencia": "Atualização de documentação de SST",
+      "acao": "Cobrar o fornecedor a atualização de documentos",
+      "responsavel": "Tiago",
+      "prazo": "06/11/2026",
+      "status": "Urgente"
+    },
+    {
+      "id": "3",
+      "pendencia": "Verificar prazo de inicio do serviço",
+      "acao": "Cobrar o fornecedor data de inicio do serviço",
+      "responsavel": "Tiago",
+      "prazo": "06/11/2026",
+      "status": "Urgente"
+    },
+    {
+      "id": "4",
+      "pendencia": "Pagamento",
+      "acao": "Acompanhar pagamento da medição de mobilização",
+      "responsavel": "Tiago",
+      "prazo": "06/11/2026",
+      "status": "Urgente"
+    },
+    {
+      "id": "5",
+      "pendencia": "Ordem de serviço",
+      "acao": "Elaborar Ordem de Serviço",
+      "responsavel": "Tácyla",
+      "prazo": "10/11/2026",
+      "status": "Pendente"
+    },
+    {
+      "id": "6",
+      "pendencia": "Verificar prazo de inicio do serviço",
+      "acao": "Cobrar o fornecedor data de inicio do serviço",
+      "responsavel": "Tiago",
+      "prazo": "06/11/2026",
+      "status": "Urgente"
+    },
+    {
+      "id": "7",
+      "pendencia": "Pagamento",
+      "acao": "Acompanhar pagamento da medição de mobilização",
+      "responsavel": "Tiago",
+      "prazo": "06/11/2026",
+      "status": "Urgente"
+    },
+    {
+      "id": "8",
+      "pendencia": "Ordem de serviço",
+      "acao": "Elaborar Ordem de Serviço",
+      "responsavel": "Tácyla",
+      "prazo": "10/11/2026",
+      "status": "Pendente"
+    }
+  ],
+  "Sala limpurb e Sala de integraç": [
+    {
+      "id": "2",
+      "pendencia": "Realizar cotação do serviço",
+      "acao": "Entrar em contato com os fornecedores",
+      "responsavel": "Tacyla/Alan",
+      "prazo": "26/10/2026",
+      "status": "Replanejado",
+      "novoPrazo": "10/11/2026",
+      "atualizacoes": [
+        {
+          "id": "upd_1793903645532",
+          "data": "05/11/2026 15:34",
+          "autor": "Alan",
+          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 10/11/2026 (Prazo original: 26/10/2026).",
+          "novoPrazo": "10/11/2026"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "pendencia": "Analisar o projeto",
+      "acao": "Realizar analise detalhada do quantitativo, materiais e dimensão",
+      "responsavel": "Tacyla/Alan",
+      "prazo": "22/10/2026",
+      "status": "Replanejado",
+      "novoPrazo": "10/11/2026",
+      "atualizacoes": [
+        {
+          "id": "upd_1793903658212",
+          "data": "05/11/2026 15:34",
+          "autor": "Alan",
+          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 10/11/2026 (Prazo original: 22/10/2026).",
+          "novoPrazo": "10/11/2026"
+        }
+      ]
+    }
+  ],
+  "Triturador": [
+    {
+      "id": "2",
+      "pendencia": "Realizar levantamento topográfico",
+      "acao": "Georeferenciar e realiza o levantamento de toda a estação de transbordo",
+      "responsavel": "Alan",
+      "prazo": "Concluído",
+      "status": "Concluído"
+    },
+    {
+      "id": "3",
+      "pendencia": "Realizar estudo para dimensionamento do galpão",
+      "acao": "Aguardar retorno de Leidy , Lessa e Tácyla",
+      "responsavel": "Tiago",
+      "prazo": "04/11/2026",
+      "status": "Urgente"
+    },
+    {
+      "id": "4",
+      "pendencia": "Realizar sondagens do terreno",
+      "acao": "Realizar cotação do serviço",
+      "responsavel": "Tácyla",
+      "prazo": "10/11/2026",
+      "status": "Pendente"
+    },
+    {
+      "id": "5",
+      "pendencia": "Desenvolver projeto básico",
+      "acao": "",
+      "responsavel": "Alan",
+      "prazo": "13/11/2026",
+      "status": "Pendente"
+    },
+    {
+      "id": "6",
+      "pendencia": "Definir equipamento",
+      "acao": "Avaliar qual será o triturador e equipamentos a serem adquiridos",
+      "responsavel": "Tiago",
+      "prazo": "03/12/2026",
+      "status": "Pendente"
+    },
+    {
+      "id": "7",
+      "pendencia": "Realizar cotação projeto executivo",
+      "acao": "",
+      "responsavel": "Alan",
+      "prazo": "04/12/2026",
+      "status": "Pendente"
+    }
+  ]
+}

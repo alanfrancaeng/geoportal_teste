@@ -1,0 +1,16 @@
+[
+  {
+    "id": "3",
+    "material": "PEAD - 16 bobinas",
+    "quantidade": "16 - Bobinas",
+    "descricao": "Área por bobina 350 m²",
+    "_edit": true
+  },
+  {
+    "id": "4",
+    "material": "GCL - 46 bobinas",
+    "quantidade": "46 - Bobinas",
+    "descricao": "Área por bobina 170 m²",
+    "_edit": true
+  }
+]

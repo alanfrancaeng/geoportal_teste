@@ -1,0 +1,33 @@
+{
+    "type":  "FeatureCollection",
+    "name":  "Sala LIMPURB - AMC",
+    "crs":  {
+                "type":  "name",
+                "properties":  {
+                                   "name":  "urn:ogc:def:crs:OGC:1.3:CRS84"
+                               }
+            },
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "Name":  "Sala de Fiscalização do Poder Concedente",
+                                            "status":  "Cotação",
+                                            "inicio":  "10/11/2026",
+                                            "fim_previsto":  "25/01/2027",
+                                            "tipo":  "AMC",
+                                            "descricao":  "Sala de Fiscalização do Poder Concedente - AMC",
+                                            "pdf":  "Sala LIMPURB - AMC.pdf",
+                                            "excel":  ""
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -38.364288218744029,
+                                                              -12.864345009239759,
+                                                              64.848262815346772
+                                                          ]
+                                      }
+                     }
+                 ]
+}

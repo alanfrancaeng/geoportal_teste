@@ -1,0 +1,57 @@
+{
+    "type":  "FeatureCollection",
+    "name":  "Sala de Integracao -contorno - AMC",
+    "crs":  {
+                "type":  "name",
+                "properties":  {
+                                   "name":  "urn:ogc:def:crs:OGC:1.3:CRS84"
+                               }
+            },
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "Name":  "Sala de integração",
+                                            "status":  "Cotação",
+                                            "inicio":  "10/11/2026",
+                                            "fim_previsto":  "20/12/2026",
+                                            "tipo":  "AMC",
+                                            "descricao":  "Sala de integração - Aterro Metropolitano Centro",
+                                            "pdf":  "Sala de Integracao - AMC.pdf",
+                                            "excel":  ""
+                                        },
+                         "geometry":  {
+                                          "type":  "Polygon",
+                                          "coordinates":  [
+                                                              [
+                                                                  [
+                                                                      -38.364465903435857,
+                                                                      -12.864819996979101,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.364377584152713,
+                                                                      -12.86484567663347,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.36436673789072,
+                                                                      -12.864774680044251,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.364453507710188,
+                                                                      -12.86475957433758,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.364465903435857,
+                                                                      -12.864819996979101,
+                                                                      0.0
+                                                                  ]
+                                                              ]
+                                                          ]
+                                      }
+                     }
+                 ]
+}

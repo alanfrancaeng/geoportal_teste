@@ -1,0 +1,57 @@
+{
+    "type":  "FeatureCollection",
+    "name":  "Reforma Tanque de Chorume -contorno - ETB",
+    "crs":  {
+                "type":  "name",
+                "properties":  {
+                                   "name":  "urn:ogc:def:crs:OGC:1.3:CRS84"
+                               }
+            },
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "Name":  "Reforma tanque de armazenamento de chorume",
+                                            "status":  "Integração",
+                                            "inicio":  "10/11/2026",
+                                            "fim_previsto":  "31/12/2026",
+                                            "tipo":  "ETB",
+                                            "descricao":  "Reforma tanque de armazenamento de chorume - ETB",
+                                            "pdf":  "Reforma Tanque de Chorume - ETB.pdf",
+                                            "excel":  "BI_PMO_Obras_BATTRE.xlsx"
+                                        },
+                         "geometry":  {
+                                          "type":  "Polygon",
+                                          "coordinates":  [
+                                                              [
+                                                                  [
+                                                                      -38.430223068847567,
+                                                                      -12.91773934239478,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.43011827164797,
+                                                                      -12.917768851056779,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.430099640922577,
+                                                                      -12.91768032561853,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.430209095789174,
+                                                                      -12.91766443622598,
+                                                                      0.0
+                                                                  ],
+                                                                  [
+                                                                      -38.430223068847567,
+                                                                      -12.91773934239478,
+                                                                      0.0
+                                                                  ]
+                                                              ]
+                                                          ]
+                                      }
+                     }
+                 ]
+}
