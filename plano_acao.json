@@ -114,7 +114,17 @@
       "acao": "Coletar propostas e avaliar",
       "responsavel": "Tiago",
       "prazo": "21/10/2026",
-      "status": "Atrasado"
+      "status": "Replanejado",
+      "novoPrazo": "25/11/2026",
+      "atualizacoes": [
+        {
+          "id": "upd_1793978537170",
+          "data": "06/11/2026 12:22",
+          "autor": "Tacyla",
+          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 25/11/2026 (Prazo original: 21/10/2026).",
+          "novoPrazo": "25/11/2026"
+        }
+      ]
     },
     {
       "id": "8",
