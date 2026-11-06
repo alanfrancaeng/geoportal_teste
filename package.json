@@ -1,0 +1,12 @@
+{
+  "name": "geoportal-bi-obras-battre",
+  "version": "1.0.0",
+  "description": "GEOportal e Painel Executivo PMO de Obras BATTRE",
+  "main": "index.html",
+  "scripts": {
+    "start": "node -e \"console.log('Ambiente configurado.')\""
+  },
+  "dependencies": {
+    "@vercel/blob": "^0.27.1"
+  }
+}

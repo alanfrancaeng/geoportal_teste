@@ -2826,15 +2826,20 @@
         <div class="plano-header-actions">
           <span class="plano-sync-badge" id="plano-sync-badge">
             <span class="pulse-dot-green"></span>
-            <span id="plano-sync-text">Sincronizado com pasta local (OneDrive)</span>
+            <span id="plano-sync-text">Sincronizado</span>
           </span>
-          <button class="btn-plano-action" onclick="loadPlanoDeAcao(true)" title="Recarregar dados da planilha Excel">
-            <i class="fa-solid fa-rotate"></i>
-            <span>Atualizar Planilha</span>
+          <button class="btn-plano-action" onclick="exportarJsonPlano()" title="Exportar/Baixar arquivo plano_acao.json atualizado">
+            <i class="fa-solid fa-download"></i>
+            <span>Exportar JSON</span>
           </button>
-          <button class="btn-plano-action btn-save-disk" onclick="savePlanoToDiskManually()" title="Salvar alterações na pasta compartilhada do OneDrive">
+          <button class="btn-plano-action" onclick="document.getElementById('input-import-plano').click()" title="Importar arquivo JSON do seu computador">
+            <i class="fa-solid fa-upload"></i>
+            <span>Importar</span>
+          </button>
+          <input type="file" id="input-import-plano" accept=".json" style="display:none;" onchange="importarJsonPlano(event)">
+          <button class="btn-plano-action btn-save-disk" onclick="savePlanoToDiskManually()" title="Salvar alterações">
             <i class="fa-solid fa-floppy-disk"></i>
-            <span>Salvar na Pasta</span>
+            <span>Salvar</span>
           </button>
           <button class="btn-plano-action btn-new-action" onclick="openPlanoModal()">
             <i class="fa-solid fa-plus"></i>
@@ -3001,15 +3006,20 @@
           </div>
           <span class="plano-sync-badge" id="estoque-sync-badge">
             <span class="pulse-dot-green"></span>
-            <span id="estoque-sync-text">Sincronizado com pasta local (OneDrive)</span>
+            <span id="estoque-sync-text">Sincronizado</span>
           </span>
-          <button class="btn-plano-action" onclick="loadEstoque(true)" title="Recarregar dados da planilha Excel">
-            <i class="fa-solid fa-rotate"></i>
-            <span>Atualizar Planilha</span>
+          <button class="btn-plano-action" onclick="exportarJsonEstoque()" title="Exportar/Baixar arquivo estoque.json atualizado">
+            <i class="fa-solid fa-download"></i>
+            <span>Exportar JSON</span>
           </button>
-          <button class="btn-plano-action btn-save-disk" onclick="saveEstoqueToDiskManually()" title="Salvar alterações na pasta compartilhada do OneDrive">
+          <button class="btn-plano-action" onclick="document.getElementById('input-import-estoque').click()" title="Importar arquivo JSON do seu computador">
+            <i class="fa-solid fa-upload"></i>
+            <span>Importar</span>
+          </button>
+          <input type="file" id="input-import-estoque" accept=".json" style="display:none;" onchange="importarJsonEstoque(event)">
+          <button class="btn-plano-action btn-save-disk" onclick="saveEstoqueToDiskManually()" title="Salvar alterações">
             <i class="fa-solid fa-floppy-disk"></i>
-            <span>Salvar na Pasta</span>
+            <span>Salvar</span>
           </button>
           <button class="btn-plano-action btn-new-action" onclick="openEstoqueModal()">
             <i class="fa-solid fa-plus"></i>
@@ -5438,8 +5448,23 @@ function carregarExcelArquivoManual(evt) {
   reader.readAsArrayBuffer(file);
 }
 
+function atualizarBadgeAmbiente() {
+  const isVercel = window.location.hostname.includes('vercel.app') || (window.location.protocol === 'https:' && !window.location.hostname.includes('localhost'));
+  const pText = document.getElementById('plano-sync-text');
+  const eText = document.getElementById('estoque-sync-text');
+
+  if (isVercel) {
+    if (pText) pText.textContent = 'Nuvem Vercel (Persistente)';
+    if (eText) eText.textContent = 'Nuvem Vercel (Persistente)';
+  } else {
+    if (pText) pText.textContent = 'Local (OneDrive & Excel)';
+    if (eText) eText.textContent = 'Local (OneDrive & Excel)';
+  }
+}
+
 // Disparo automático na inicialização
 window.addEventListener('DOMContentLoaded', () => {
+  atualizarBadgeAmbiente();
   setTimeout(() => {
     sincronizarPlanilhaAutomatica(false);
   }, 200);
@@ -6169,34 +6194,243 @@ let currentEstoqueView = 'cards';
 let activeEstoqueDiv   = 'ALL';
 let activeEstoqueCat   = 'ALL';
 
-// ─── Funções de Persistência em Arquivos Locais (OneDrive) ───────────────────
+// ─── Funções de Persistência Híbrida (Vercel Nuvem + OneDrive Local + LocalStorage) ──────
 async function saveJsonFileToDisk(filename, data) {
+  // 1. Grava imediatamente no localStorage com timestamp para nunca perder após F5
+  try {
+    localStorage.setItem('battre_disk_' + filename, JSON.stringify(data));
+    localStorage.setItem('battre_ts_' + filename, Date.now().toString());
+  } catch (e) {
+    console.warn('[STORAGE] Erro ao gravar no localStorage:', e);
+  }
+
+  // 2. Envia para a API (server.py local no Windows ou Serverless Function api/save.js na Vercel)
   try {
     const res = await fetch('/api/save?file=' + encodeURIComponent(filename), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json; charset=utf-8' },
       body: JSON.stringify(data, null, 2)
     });
+
     if (res.ok) {
-      console.log('[ONEDRIVE] Arquivo salvo na pasta com sucesso:', filename);
-      showSyncToastNotification('Salvo na pasta compartilhada (OneDrive)!');
-      return true;
+      const respJson = await res.json().catch(() => ({}));
+      const storageType = respJson.storage || 'disk';
+      if (storageType === 'github') {
+        showSyncToastNotification('Salvo e commitado no GitHub com sucesso!');
+        return true;
+      } else if (storageType === 'blob' || storageType === 'redis') {
+        showSyncToastNotification('Salvo na nuvem com sucesso!');
+        return true;
+      } else if (storageType === 'disk') {
+        showSyncToastNotification('Salvo na pasta compartilhada (OneDrive)!');
+        return true;
+      } else {
+        showSyncToastNotification('Salvo e sincronizado com sucesso!');
+        return true;
+      }
     }
   } catch (err) {
-    console.warn('[DISK-SAVE] Servidor local não respondeu, usando localStorage:', err.message);
+    console.warn('[SAVE] Servidor remoto não respondeu:', err.message);
   }
-  localStorage.setItem('battre_disk_' + filename, JSON.stringify(data));
-  showSyncToastNotification('Salvo localmente no navegador!');
+
+  showSyncToastNotification('Alterações salvas com sucesso no navegador!');
   return false;
 }
 
+// ─── Mesclagem Inteligente de Plano de Ação ──────────────────────────────────
+function mesclarPlanoAcao(serverData, localData) {
+  if (!serverData && !localData) return {};
+  if (!serverData) return localData;
+  if (!localData) return serverData;
+
+  const resultado = JSON.parse(JSON.stringify(serverData));
+
+  Object.keys(localData).forEach(proj => {
+    if (!resultado[proj]) {
+      resultado[proj] = localData[proj];
+      return;
+    }
+
+    const mapServerById = {};
+    const mapServerByPend = {};
+    resultado[proj].forEach((item, idx) => {
+      if (item.id) mapServerById[String(item.id)] = idx;
+      if (item.pendencia) mapServerByPend[item.pendencia.trim().toLowerCase()] = idx;
+    });
+
+    localData[proj].forEach(localItem => {
+      const idx = (localItem.id && mapServerById[String(localItem.id)] !== undefined)
+        ? mapServerById[String(localItem.id)]
+        : (localItem.pendencia ? mapServerByPend[localItem.pendencia.trim().toLowerCase()] : undefined);
+
+      if (idx !== undefined) {
+        const sItem = resultado[proj][idx];
+        if (localItem.novoPrazo) sItem.novoPrazo = localItem.novoPrazo;
+        if (localItem.status) sItem.status = localItem.status;
+        if (localItem.atualizacoes && localItem.atualizacoes.length > 0) {
+          sItem.atualizacoes = localItem.atualizacoes;
+        }
+        if (localItem.acao && localItem.acao !== sItem.acao) sItem.acao = localItem.acao;
+        if (localItem.responsavel && localItem.responsavel !== sItem.responsavel) sItem.responsavel = localItem.responsavel;
+      } else {
+        resultado[proj].push(localItem);
+      }
+    });
+  });
+
+  return resultado;
+}
+
+// ─── Mesclagem Inteligente de Estoque ────────────────────────────────────────
+function mesclarEstoque(serverData, localData) {
+  if (!serverData && !localData) return [];
+  if (!serverData) return localData;
+  if (!localData) return serverData;
+
+  const resultado = Array.isArray(serverData) ? JSON.parse(JSON.stringify(serverData)) : [];
+  const mapServer = {};
+  resultado.forEach((it, idx) => {
+    const key = (it.id || '') + '|' + (it.material || '').trim().toLowerCase();
+    mapServer[key] = idx;
+  });
+
+  if (Array.isArray(localData)) {
+    localData.forEach(lItem => {
+      const key = (lItem.id || '') + '|' + (lItem.material || '').trim().toLowerCase();
+      const idx = mapServer[key];
+      if (idx !== undefined) {
+        resultado[idx] = Object.assign({}, resultado[idx], lItem);
+      } else {
+        resultado.push(lItem);
+      }
+    });
+  }
+
+  return resultado;
+}
+
 async function loadJsonFileFromDisk(filename) {
+  let serverData = null;
+
+  // 1. Tentar ler da API serverless /api/load (nuvem)
   try {
-    const res = await fetch(filename + '?t=' + Date.now(), { cache: 'no-store' });
-    if (res.ok) return await res.json();
+    const apiRes = await fetch('/api/load?file=' + encodeURIComponent(filename) + '&_t=' + Date.now(), { cache: 'no-store' });
+    if (apiRes.ok) {
+      const apiJson = await apiRes.json();
+      if (apiJson && apiJson.data) {
+        serverData = apiJson.data;
+      }
+    }
   } catch (e) {}
-  const local = localStorage.getItem('battre_disk_' + filename);
-  return local ? JSON.parse(local) : null;
+
+  // 2. Se a API de load não respondeu, buscar o arquivo estático do deploy
+  if (!serverData) {
+    try {
+      const res = await fetch(filename + '?_t=' + Date.now(), { cache: 'no-store' });
+      if (res.ok) {
+        serverData = await res.json();
+      }
+    } catch (e) {}
+  }
+
+  // 3. Ler dados salvos no localStorage
+  let localData = null;
+  try {
+    const localRaw = localStorage.getItem('battre_disk_' + filename);
+    if (localRaw) {
+      localData = JSON.parse(localRaw);
+    }
+  } catch (e) {}
+
+  // 4. Mesclagem inteligente: garante que edições feitas nunca sumam ao recarregar a página
+  if (localData && serverData) {
+    let mesclado = null;
+    if (filename === 'plano_acao.json') {
+      mesclado = mesclarPlanoAcao(serverData, localData);
+    } else if (filename === 'estoque.json') {
+      mesclado = mesclarEstoque(serverData, localData);
+    } else {
+      mesclado = Object.assign({}, serverData, localData);
+    }
+    try {
+      localStorage.setItem('battre_disk_' + filename, JSON.stringify(mesclado));
+    } catch (e) {}
+    return mesclado;
+  }
+
+  return localData || serverData || null;
+}
+
+// ─── Exportação e Importação de Arquivos JSON ────────────────────────────────
+function exportarJsonPlano() {
+  const dataStr = 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(planoDataStore, null, 2));
+  const a = document.createElement('a');
+  a.href = dataStr;
+  a.download = 'plano_acao.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  showSyncToastNotification('Arquivo plano_acao.json baixado com sucesso!');
+}
+
+function importarJsonPlano(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const parsed = JSON.parse(e.target.result);
+      if (parsed && typeof parsed === 'object') {
+        planoDataStore = parsed;
+        salvarPlanoAutomaticamente();
+        renderPlanoKPIs();
+        renderPlanoProjectPills();
+        renderPlanoTable();
+        populatePlanoRespFilter();
+        showSyncToastNotification('Plano de Ação importado e salvo com sucesso!');
+      } else {
+        alert('Formato de arquivo JSON inválido.');
+      }
+    } catch (err) {
+      alert('Erro ao ler o arquivo JSON: ' + err.message);
+    }
+  };
+  reader.readAsText(file, 'utf-8');
+  event.target.value = '';
+}
+
+function exportarJsonEstoque() {
+  const dataStr = 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(estoqueDataStore, null, 2));
+  const a = document.createElement('a');
+  a.href = dataStr;
+  a.download = 'estoque.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  showSyncToastNotification('Arquivo estoque.json baixado com sucesso!');
+}
+
+function importarJsonEstoque(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const parsed = JSON.parse(e.target.result);
+      if (Array.isArray(parsed)) {
+        estoqueDataStore = parsed;
+        salvarEstoqueAutomaticamente();
+        renderEstoque();
+        showSyncToastNotification('Estoque de Materiais importado e salvo com sucesso!');
+      } else {
+        alert('Formato de arquivo JSON inválido. Deve ser uma lista de materiais.');
+      }
+    } catch (err) {
+      alert('Erro ao ler o arquivo JSON: ' + err.message);
+    }
+  };
+  reader.readAsText(file, 'utf-8');
+  event.target.value = '';
 }
 
 function showSyncToastNotification(msg) {
