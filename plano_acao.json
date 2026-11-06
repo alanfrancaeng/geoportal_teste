@@ -65,6 +65,14 @@
       "responsavel": "Tacyla",
       "prazo": "06/11/2026",
       "status": "Urgente"
+    },
+    {
+      "id": "novo_1793977849994",
+      "pendencia": "pipoca",
+      "acao": "",
+      "responsavel": "Alan",
+      "prazo": "06/11/2026",
+      "status": "Urgente"
     }
   ],
   "Célula 7 - Etapa 4": [
@@ -116,7 +124,15 @@
       "prazo": "21/10/2026",
       "status": "Replanejado",
       "novoPrazo": "25/11/2026",
-      "atualizacoes": []
+      "atualizacoes": [
+        {
+          "id": "upd_1793986505545",
+          "data": "06/11/2026 14:35",
+          "autor": "Alan",
+          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 25/11/2026 (Prazo original: 21/10/2026).",
+          "novoPrazo": "25/11/2026"
+        }
+      ]
     },
     {
       "id": "8",
