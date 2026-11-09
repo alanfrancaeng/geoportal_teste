@@ -85,6 +85,14 @@
       "responsavel": "Tácyla",
       "prazo": "12/11/2026",
       "status": "Urgente"
+    },
+    {
+      "id": "novo_1794249703641",
+      "pendencia": "Concretagem e proteção da bacia",
+      "acao": "Realizar compra de materiais",
+      "responsavel": "Tiago",
+      "prazo": "16/11/2026",
+      "status": "Pendente"
     }
   ],
   "Célula 7 - Etapa 4": [
