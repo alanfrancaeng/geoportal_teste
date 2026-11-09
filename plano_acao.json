@@ -7,14 +7,14 @@
       "responsavel": "Tácyla",
       "prazo": "30/10/2026",
       "status": "Replanejado",
-      "novoPrazo": "18/11/2026",
+      "novoPrazo": "25/11/2026",
       "atualizacoes": [
         {
-          "id": "upd_1794249304560",
-          "data": "09/11/2026 15:35",
-          "autor": "Tiago",
-          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 18/11/2026 (Prazo original: 30/10/2026).",
-          "novoPrazo": "18/11/2026"
+          "id": "upd_1793883176557",
+          "data": "05/11/2026 09:52",
+          "autor": "Alan",
+          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 25/11/2026 (Prazo original: 30/10/2026).",
+          "novoPrazo": "25/11/2026"
         }
       ]
     },
@@ -24,17 +24,7 @@
       "acao": "Atualizar projeto com detalhes executivos, localização e materiais",
       "responsavel": "Alan",
       "prazo": "05/11/2026",
-      "status": "Replanejado",
-      "novoPrazo": "12/11/2026",
-      "atualizacoes": [
-        {
-          "id": "upd_1794249364937",
-          "data": "09/11/2026 15:36",
-          "autor": "Tiago",
-          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 12/11/2026 (Prazo original: 05/11/2026).",
-          "novoPrazo": "12/11/2026"
-        }
-      ]
+      "status": "Urgente"
     },
     {
       "id": "4",
@@ -42,7 +32,7 @@
       "acao": "Programar com Gabriela equipe",
       "responsavel": "Tácyla",
       "prazo": "06/11/2026",
-      "status": "Urgente"
+      "status": "Concluído"
     },
     {
       "id": "5",
