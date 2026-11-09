@@ -8,15 +8,7 @@
       "prazo": "30/10/2026",
       "status": "Replanejado",
       "novoPrazo": "25/11/2026",
-      "atualizacoes": [
-        {
-          "id": "upd_1793883176557",
-          "data": "05/11/2026 09:52",
-          "autor": "Alan",
-          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 25/11/2026 (Prazo original: 30/10/2026).",
-          "novoPrazo": "25/11/2026"
-        }
-      ]
+      "atualizacoes": []
     },
     {
       "id": "3",
