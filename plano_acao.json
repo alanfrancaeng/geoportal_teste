@@ -7,14 +7,14 @@
       "responsavel": "Tácyla",
       "prazo": "30/10/2026",
       "status": "Replanejado",
-      "novoPrazo": "25/11/2026",
+      "novoPrazo": "18/11/2026",
       "atualizacoes": [
         {
-          "id": "upd_1793883176557",
-          "data": "05/11/2026 09:52",
-          "autor": "Alan",
-          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 25/11/2026 (Prazo original: 30/10/2026).",
-          "novoPrazo": "25/11/2026"
+          "id": "upd_1794249304560",
+          "data": "09/11/2026 15:35",
+          "autor": "Tiago",
+          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 18/11/2026 (Prazo original: 30/10/2026).",
+          "novoPrazo": "18/11/2026"
         }
       ]
     },
@@ -87,12 +87,12 @@
       "status": "Urgente"
     },
     {
-      "id": "novo_1793978310359",
-      "pendencia": "BALDINHO PERDIDO",
-      "acao": "PROCURAR O BALDINHO",
-      "responsavel": "BLACKÃO",
-      "prazo": "06/11/2026",
-      "status": "Atrasado"
+      "id": "novo_1794249703641",
+      "pendencia": "Concretagem e proteção da bacia",
+      "acao": "Realizar compra de materiais",
+      "responsavel": "Tiago",
+      "prazo": "16/11/2026",
+      "status": "Pendente"
     }
   ],
   "Célula 7 - Etapa 4": [
@@ -110,7 +110,7 @@
       "acao": "Elaborar ordem de serviço",
       "responsavel": "Tácyla",
       "prazo": "04/11/2026",
-      "status": "Urgente"
+      "status": "Atrasado"
     },
     {
       "id": "4",
