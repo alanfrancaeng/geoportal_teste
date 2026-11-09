@@ -110,7 +110,17 @@
       "acao": "Elaborar ordem de serviço",
       "responsavel": "Tácyla",
       "prazo": "04/11/2026",
-      "status": "Atrasado"
+      "status": "Replanejado",
+      "novoPrazo": "11/11/2026",
+      "atualizacoes": [
+        {
+          "id": "upd_1794249788477",
+          "data": "09/11/2026 15:43",
+          "autor": "Tiago",
+          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 11/11/2026 (Prazo original: 04/11/2026).",
+          "novoPrazo": "11/11/2026"
+        }
+      ]
     },
     {
       "id": "4",
