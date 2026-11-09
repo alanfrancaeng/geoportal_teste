@@ -50,7 +50,17 @@
       "acao": "Revisar o cronograma e detalhar",
       "responsavel": "Tácyla",
       "prazo": "10/11/2026",
-      "status": "Urgente"
+      "status": "Replanejado",
+      "novoPrazo": "13/11/2026",
+      "atualizacoes": [
+        {
+          "id": "upd_1794249442915",
+          "data": "09/11/2026 15:37",
+          "autor": "Tiago",
+          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 13/11/2026 (Prazo original: 10/11/2026).",
+          "novoPrazo": "13/11/2026"
+        }
+      ]
     },
     {
       "id": "6",
