@@ -24,7 +24,17 @@
       "acao": "Atualizar projeto com detalhes executivos, localização e materiais",
       "responsavel": "Alan",
       "prazo": "05/11/2026",
-      "status": "Atrasado"
+      "status": "Replanejado",
+      "novoPrazo": "12/11/2026",
+      "atualizacoes": [
+        {
+          "id": "upd_1794249364937",
+          "data": "09/11/2026 15:36",
+          "autor": "Tiago",
+          "texto": "Reprogramação de prazo registrada. Novo prazo definido para 12/11/2026 (Prazo original: 05/11/2026).",
+          "novoPrazo": "12/11/2026"
+        }
+      ]
     },
     {
       "id": "4",
